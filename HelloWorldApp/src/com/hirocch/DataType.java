@@ -27,7 +27,6 @@ package com.hirocch;
 /**
  * データ型
  *
- * @version 0.1.0 新規作成
  * @author hirocch
  */
 public class DataType {

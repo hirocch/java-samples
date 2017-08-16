@@ -27,7 +27,6 @@ package com.hirocch;
 /**
  * ロードバイククラス
  *
- * @version 0.1.0 新規作成
  * @author hirocch
  */
 public class RoadBike implements Bicycle2 {

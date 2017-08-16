@@ -26,7 +26,6 @@ package com.hirocch;
 /**
  * HelloWorldAppクラス
  *
- * @version 0.1.0 新規作成
  * @author hirocch
  */
 public class HelloWorldApp {

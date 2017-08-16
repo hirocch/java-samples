@@ -27,7 +27,6 @@ package com.hirocch;
 /**
  * 自転車デモクラス
  *
- * @version 0.1.0 新規作成
  * @author hirocch
  */
 public class BicycleDemo {

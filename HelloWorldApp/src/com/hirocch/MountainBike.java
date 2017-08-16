@@ -27,9 +27,7 @@ package com.hirocch;
 /**
  * マウンテンバイククラス
  *
- * @version 0.1.0 新規作成
  * @author hirocch
- * @see com.hirocch.Bicycle
  */
 public class MountainBike extends Bicycle {
 }

@@ -27,7 +27,6 @@ package com.hirocch;
 /**
  * 自転車インターフェイス
  *
- * @version 0.1.0 新規作成
  * @author hirocch
  */
 public interface Bicycle2 {
