@@ -33,7 +33,7 @@ public class BicycleDemo {
 
     /**
      * メイン
-     * @param args
+     * @param args コマンドラインパラメータ
      */
     public static void main(String[] args) {
         // 自転車オブジェクト生成
