@@ -40,36 +40,69 @@ class BicycleTest {
     }
 
     @Test
-    void changeCadence() {
+    void Bicycle() {
         Bicycle b = new Bicycle();
-        b.changeCadence(10);
         assertEquals(b.cadence, 10);
+        assertEquals(b.speed, 0);
+        assertEquals(b.gear, 1);
     }
 
     @Test
-    void changeGear() {
-        Bicycle b = new Bicycle();
-        b.changeGear(2);
-        assertEquals(b.gear, 2);
+    void Bicycle2() {
+        Bicycle b = new Bicycle(10,20,30);
+        assertEquals(b.cadence, 10);
+        assertEquals(b.speed, 20);
+        assertEquals(b.gear, 30);
+    }
+
+    @Test
+    void getCadence() {
+        Bicycle b = new Bicycle(10,20,30);
+        assertEquals(b.getCadence(), 10);
+    }
+
+    @Test
+    void setCadence() {
+        Bicycle b = new Bicycle(10,20,30);
+        b.setCadence(100);
+        assertEquals(b.cadence, 100);
+    }
+
+    @Test
+    void getGear() {
+        Bicycle b = new Bicycle(10,20,30);
+        assertEquals(b.getGear(), 30);
+    }
+
+    @Test
+    void setGear() {
+        Bicycle b = new Bicycle(10,20,30);
+        b.setGear(200);
+        assertEquals(b.gear, 200);
+    }
+
+    @Test
+    void getSpeed() {
+        Bicycle b = new Bicycle(10,20,30);
+        assertEquals(b.getSpeed(), 20);
     }
 
     @Test
     void speedUp() {
-        Bicycle b = new Bicycle();
-        b.speedUp(10);
-        assertEquals(b.speed, 10);
-        b.speedUp(25);
-        assertEquals(b.speed, 35);
+        Bicycle b = new Bicycle(10,20,30);
+        b.speedUp(100);
+        assertEquals(b.speed, 120);
+        b.speedUp(100);
+        assertEquals(b.speed, 220);
     }
 
     @Test
     void applyBrakes() {
-        Bicycle b = new Bicycle();
-        b.speed = 100;
+        Bicycle b = new Bicycle(10,20,30);
+        b.applyBrakes(5);
+        assertEquals(b.speed, 15);
         b.applyBrakes(10);
-        assertEquals(b.speed, 90);
-        b.applyBrakes(25);
-        assertEquals(b.speed, 65);
+        assertEquals(b.speed, 5);
     }
 
     @Test

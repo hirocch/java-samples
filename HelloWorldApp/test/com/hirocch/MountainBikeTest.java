@@ -30,38 +30,36 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MountainBikeTest {
     @Test
-    void changeCadence() {
+    void MountainBike() {
         MountainBike b = new MountainBike();
-        b.changeCadence(10);
         assertEquals(b.cadence, 10);
+        assertEquals(b.speed, 0);
+        assertEquals(b.gear, 1);
+        assertEquals(b.seatHeight, 0);
     }
 
     @Test
-    void changeGear() {
-        MountainBike b = new MountainBike();
-        b.changeGear(2);
-        assertEquals(b.gear, 2);    }
-
-    @Test
-    void speedUp() {
-        MountainBike b = new MountainBike();
-        b.speedUp(10);
-        assertEquals(b.speed, 10);
-        b.speedUp(25);
-        assertEquals(b.speed, 35);
+    void MountainBike2() {
+        MountainBike b = new MountainBike(10,20,30);
+        assertEquals(b.cadence, 10);
+        assertEquals(b.speed, 20);
+        assertEquals(b.gear, 30);
+        assertEquals(b.seatHeight, 0);
     }
 
     @Test
-    void applyBrakes() {
-        MountainBike b = new MountainBike();
-        b.speed = 100;
-        b.applyBrakes(10);
-        assertEquals(b.speed, 90);
-        b.applyBrakes(25);
-        assertEquals(b.speed, 65);    }
-
-    @Test
-    void printStates() {
+    void MountainBike3() {
+        MountainBike b = new MountainBike(10,20,30,40);
+        assertEquals(b.cadence, 10);
+        assertEquals(b.speed, 20);
+        assertEquals(b.gear, 30);
+        assertEquals(b.seatHeight, 40);
     }
 
+    @Test
+    void setHeight() {
+        MountainBike b = new MountainBike(10,20,30,40);
+        b.setHeight(100);
+        assertEquals(b.seatHeight, 100);
+    }
 }

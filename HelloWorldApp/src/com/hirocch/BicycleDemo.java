@@ -41,19 +41,21 @@ public class BicycleDemo {
         Bicycle bike2 = new Bicycle();
 
         // 自転車１
-        bike1.changeCadence(50);
+        bike1.setCadence(50);
         bike1.speedUp(10);
-        bike1.changeGear(2);
+        bike1.setGear(2);
         bike1.printStates();
+        System.out.println("ID=" + bike1.getID());
 
         //自転車２
-        bike2.changeCadence(50);
+        bike2.setCadence(50);
         bike2.speedUp(10);
-        bike2.changeGear(2);
-        bike2.changeCadence(40);
+        bike2.setGear(2);
+        bike2.setCadence(40);
         bike2.speedUp(10);
-        bike2.changeGear(3);
+        bike2.setGear(3);
         bike2.printStates();
+        System.out.println("ID=" + bike2.getID());
     }
 
 }

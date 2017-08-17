@@ -30,4 +30,50 @@ package com.hirocch;
  * @author hirocch
  */
 public class MountainBike extends Bicycle {
+
+    /**
+     * シート高
+     */
+    public int seatHeight;
+
+    /**
+     * コンストラクタ
+     *
+     */
+    public MountainBike() {
+        super();
+        seatHeight = 0;
+    }
+
+    /**
+     * コンストラクタ
+     *
+     * @param startCadence 回転数の初期値
+     * @param startSpeed   スピードの初期値
+     * @param startGear    ギアの初期値
+     */
+    public MountainBike(int startCadence, int startSpeed, int startGear) {
+        this(startCadence, startSpeed, startGear, 0);
+    }
+
+    /**
+     * コンストラクタ
+     *
+     * @param startCadence 回転数の初期値
+     * @param startSpeed   スピードの初期値
+     * @param startGear    ギアの初期値
+     * @param startHeight シート高の初期値
+     */
+    public MountainBike(int startCadence, int startSpeed, int startGear, int startHeight) {
+        super(startCadence, startSpeed, startGear);
+        seatHeight = startHeight;
+    }
+
+    /**
+     * シート高を設定する
+     * @param newValue シート高
+     */
+    public void setHeight(int newValue) {
+        seatHeight = newValue;
+    }
 }

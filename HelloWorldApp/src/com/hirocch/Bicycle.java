@@ -33,36 +33,99 @@ public class Bicycle {
     /**
      * 回転数
      */
-    int cadence = 0;
+    int cadence;
 
     /**
      * スピード
      */
-    int speed = 0;
+    int speed;
 
     /**
      * ギア
      */
-    int gear = 0;
+    int gear;
 
     /**
-     * 回転数を変更する
+     * ID
+     */
+    private int id;
+
+    /**
+     * 採番用番号
+     */
+    private static int numberOfBicycles = 0;
+
+    /**
+     * コンストラクタ
+     */
+    public Bicycle() {
+        this(10, 0, 1);
+    }
+
+    /**
+     * コンストラクタ
+     *
+     * @param startCadence 回転数の初期値
+     * @param startSpeed   スピードの初期値
+     * @param startGear    ギアの初期値
+     */
+    public Bicycle(int startCadence, int startSpeed, int startGear) {
+        cadence = startCadence;
+        speed = startSpeed;
+        gear = startGear;
+
+        // IDを採番
+        id = ++numberOfBicycles;
+    }
+
+    /**
+     * 回転数を取得する
+     *
+     * @return 回転数
+     */
+    public int getCadence() {
+        return cadence;
+    }
+
+    /**
+     * 回転数を設定する
+     *
      * @param newValue 回転数
      */
-    void changeCadence(int newValue) {
+    void setCadence(int newValue) {
         cadence = newValue;
     }
 
     /**
-     * ギアを変更する
+     * ギアを取得する
+     *
+     * @return ギア
+     */
+    public int getGear() {
+        return gear;
+    }
+
+    /**
+     * ギアを設定する
+     *
      * @param newValue ギア
      */
-    void changeGear(int newValue) {
+    void setGear(int newValue) {
         gear = newValue;
     }
 
     /**
+     * 速度を取得する
+     *
+     * @return 速度
+     */
+    public int getSpeed() {
+        return speed;
+    }
+
+    /**
      * 加速する
+     *
      * @param increment スピード
      */
     void speedUp(int increment) {
@@ -71,6 +134,7 @@ public class Bicycle {
 
     /**
      * 減速する
+     *
      * @param decrement スピード
      */
     void applyBrakes(int decrement) {
@@ -81,9 +145,24 @@ public class Bicycle {
      * 回転数、スピード、ギアを表示する
      */
     void printStates() {
-        System.out.println(
-                "回転数:" + cadence +
-                " スピード:" + speed +
-                " ギア:" + gear);
+        System.out.printf("回転数:%s スピード:%s ギア:%s\n", cadence, speed, gear);
+    }
+
+    /**
+     * IDを取得する
+     *
+     * @return ID
+     */
+    public int getID() {
+        return id;
+    }
+
+    /**
+     * 採番用番号を取得する
+     *
+     * @return 採番用番号
+     */
+    public static int getNumberOfBicycles() {
+        return numberOfBicycles;
     }
 }
