@@ -29,7 +29,7 @@ package com.hirocch;
  *
  * @author hirocch
  */
-public class Rectangle {
+public class Rectangle implements Relatable {
     /**
      * 幅
      */
@@ -102,5 +102,17 @@ public class Rectangle {
      */
     public int getArea() {
         return width * height;
+    }
+
+    /**
+     * 面積を比較する
+     *
+     * @param other 比較する他の矩形
+     * @return 他より大きい場合は、0より小さい値、同じ場合は、0、小さい場合は、0より大きい値を返す
+     */
+    @Override
+    public int compare(Relatable other) {
+        Rectangle otherRect = (Rectangle)other;
+        return Integer.compare(getArea(), otherRect.getArea());
     }
 }

@@ -33,6 +33,7 @@ public class CreateObjectDemo {
 
     /**
      * メイン
+     *
      * @param args コマンドラインパラメータ
      */
     public static void main(String[] args) {
@@ -57,5 +58,15 @@ public class CreateObjectDemo {
         rectTwo.move(40, 72);
         System.out.println("X Position of rectTwo: " + rectTwo.origin.x);
         System.out.println("Y Position of rectTwo: " + rectTwo.origin.y);
+
+        // 面積を比較
+        if (rectOne.compare(rectTwo) < 0) {
+            System.out.println("rectOneが大きい");
+        } else if (rectOne.compare(rectTwo) == 0) {
+            System.out.println("同じ");
+        } else {
+            System.out.println("rectOneが小きい");
+        }
+
     }
 }
